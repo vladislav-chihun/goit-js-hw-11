@@ -1,11 +1,11 @@
 export function imageRender(obj) {
     return `<div class="gallery">
-      <img src="${obj.previewURL}" />
+      <img src="${data.hits[1].largeImageURL}" />
       <ul class="img-data-list">
         <li class="likes">${obj.likes}</li>
-        <li class="views">${obj.views}</li>
-        <li class="comments">${obj.comments}</li>
-        <li class="downloads">${obj.downloads}</li>
+        <li class="views">${obj.likes}</li>
+        <li class="comments">${obj.likes}</li>
+        <li class="downloads">${obj.likes}</li>
       </ul>
     </div>`;
 }

@@ -2,7 +2,7 @@ export function imageRender(data) {
     return data.hits.map((item) => {
         return `<div class="gallery-item">
             <a href="${item.largeImageURL}" target="_blank">
-                <img src="${item.largeImageURL}" alt="${item.tags}" />
+                <img src="${item.webformatURL}" alt="${item.tags}" />
             </a>
             <ul class="img-data-list">
                 <li class="likes">Likes<p>${item.likes}</p></li>

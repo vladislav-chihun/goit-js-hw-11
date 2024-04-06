@@ -1,8 +1,7 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
-import { imageRender } from './render-functions';
+import { imageRender } from "./render-functions";
 
-const renderHTML = imageRender
 const form = document.querySelector(".form");
 const gallery = document.querySelector(".gallery");
 
@@ -11,12 +10,11 @@ form.addEventListener("submit", e => {
     const q = form.elements.input.value; 
     if (q === "") return;
     getPhotos(q).then(data => {
-        const markup = renderHTML(data);
-        if (gallery !== null) {
-            gallery.innerHTML = markup;
-        }
+        const markup = imageRender(data);
+        gallery.innerHTML = markup;
     })
 });
+
 
 function getPhotos(q) {
     const API_KEY = '43242256-64b8ba54a0ed56e09a2e1fe41';
@@ -31,4 +29,5 @@ function getPhotos(q) {
     const URL = `${BASE_URL}&${params}`;
     return fetch(URL).then(res => res.json());
 }
+
 

@@ -47,3 +47,25 @@ button {
 button:hover {
   background-color: #6c8cff;
 }
+.gallery {
+  width: 1128px;
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+img {
+  width: 360px;
+  height: 200px;
+}
+.img-data-list {
+  display: flex;
+  flex-direction: row;
+}
+li {
+  display: flex;
+  flex-direction: column;
+}

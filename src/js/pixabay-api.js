@@ -1,3 +1,18 @@
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const q = form.elements.input.value; 
+    getPhotos(q).then(data => { console.log(data) })
+});
+
+
+    
+
+
+
+
+
 function getPhotos(q) {
     const API_KEY = '43242256-64b8ba54a0ed56e09a2e1fe41';
     const BASE_URL = "https://pixabay.com/api/?key=" + API_KEY;
@@ -11,4 +26,3 @@ function getPhotos(q) {
     const URL = `${BASE_URL}&${params}`;
     return fetch(URL).then(res => res.json());
 }
-getPhotos().then(data => { console.log(data) });

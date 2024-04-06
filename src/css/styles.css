@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 371px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+}
+input:hover {
+  border: 1px solid #000;
+}
+input:focus {
+  border: 1px solid #4e75ff;
+  outline: none; /* Убираем подсветку при фокусе */
+}
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  border: none;
+}
+button:hover {
+  background-color: #6c8cff;
+}

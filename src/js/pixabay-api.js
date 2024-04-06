@@ -8,7 +8,10 @@ const form = document.querySelector(".form");
 const gallery = document.querySelector(".gallery");
 
 // Створюємо новий екземпляр SimpleLightbox
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+  captionDelay: 250
+});
 
 // JavaScript
 const loader = document.getElementById('loader');
@@ -19,10 +22,17 @@ form.addEventListener("submit", e => {
     if (q === "") return;
     loader.style.display = 'block'; // Показуємо завантажувач
     getPhotos(q).then(data => {
-        const markup = imageRender(data);
-        gallery.innerHTML = markup;
+        if (data.hits.length === 0) {
+            iziToast.error({
+                message: "Sorry, there are no images matching your search query. Please try again!",
+                position: 'topRight'
+            });
+        } else {
+            const markup = imageRender(data);
+            gallery.innerHTML = markup;
+            lightbox.refresh();
+        }
         loader.style.display = 'none'; // Приховуємо завантажувач
-        lightbox.refresh();
     }).catch(error => {
         iziToast.error({
             position: "topRight",
@@ -31,6 +41,7 @@ form.addEventListener("submit", e => {
         loader.style.display = 'none'; // Приховуємо завантажувач
     });
 });
+
 
 
 function getPhotos(q) {

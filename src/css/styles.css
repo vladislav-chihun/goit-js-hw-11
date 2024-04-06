@@ -64,8 +64,5 @@ img {
 .img-data-list {
   display: flex;
   flex-direction: row;
-}
-li {
-  display: flex;
-  flex-direction: column;
+  gap: 32px;
 }

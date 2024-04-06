@@ -11,7 +11,10 @@ form.addEventListener("submit", e => {
     const q = form.elements.input.value; 
     if (q === "") return;
     getPhotos(q).then(data => {
-        const markup = renderHTML;
+        const markup = renderHTML(data);
+        if (gallery !== null) {
+            gallery.innerHTML = markup;
+        }
     })
 });
 

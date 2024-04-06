@@ -3,10 +3,10 @@ export function imageRender(data) {
         return `<div class="gallery-item">
             <img src="${item.largeImageURL}" alt="Image ${item.id}" />
             <ul class="img-data-list">
-                <li class="likes">${item.likes}</li>
-                <li class="views">${item.views}</li>
-                <li class="comments">${item.comments}</li>
-                <li class="downloads">${item.downloads}</li>
+                <li class="likes">Likes<p>${item.likes}</p></li>
+                <li class="views">Views<p>${item.views}</p></li>
+                <li class="comments">Comments<p>${item.comments}</p></li>
+                <li class="downloads">Downloads<p>${item.downloads}</p></li>
             </ul>
         </div>`;
     }).join('');

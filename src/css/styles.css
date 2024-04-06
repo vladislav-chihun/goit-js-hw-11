@@ -59,10 +59,42 @@ button:hover {
 }
 img {
   width: 360px;
-  height: 200px;
+  height: 152px;
 }
 .img-data-list {
   display: flex;
   flex-direction: row;
   gap: 32px;
+}
+li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-data-list {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.gallery-item {
+  outline: 1px solid #808080;
+}
+.likes p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.views p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.comments p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.downloads p {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }

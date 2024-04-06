@@ -1,14 +1,14 @@
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
 const form = document.querySelector(".form");
 
 form.addEventListener("submit", e => {
     e.preventDefault();
     const q = form.elements.input.value; 
+    if (q === "") return
     getPhotos(q).then(data => { console.log(data) })
 });
-
-
-    
-
 
 
 

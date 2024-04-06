@@ -7,14 +7,10 @@ import { getPhotos } from "./js/pixabay-api";
 
 const form = document.querySelector(".form");
 const gallery = document.querySelector(".gallery");
-
-// Створюємо новий екземпляр SimpleLightbox
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
   captionDelay: 250
 });
-
-// JavaScript
 const loader = document.getElementById('loader');
 
 form.addEventListener("submit", e => {

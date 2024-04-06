@@ -9,7 +9,7 @@ const form = document.querySelector(".form");
 const gallery = document.querySelector(".gallery");
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
-  captionDelay: 250
+    captionDelay: 250
 });
 const loader = document.getElementById('loader');
 
